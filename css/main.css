@@ -461,7 +461,9 @@ body {
           font-size: 1.071em;
           text-align: center;
           line-height: 21px;
-          background-color: transparent; }
+          background-color: transparent;
+          -webkit-transition: all 200ms ease;
+          transition: all 200ms ease; }
           #umai-select-a-time .modal-body .days .col-sm-1-10 a .badge.fill, #umai-select-a-time .modal-body .days .col-sm-1-10 a:hover .badge, #umai-select-a-time .modal-body .days .col-sm-1-10 .meal a.selected .badge, #umai-select-a-time .modal-body .meal .days .col-sm-1-10 a.selected .badge, #umai-select-a-time .modal-body .days .col-sm-1-10 a:active .badge, #umai-select-a-time .modal-body .days .col-sm-1-10 a:focus .badge {
             color: #fff;
             background-color: #a6724b; }
@@ -488,7 +490,9 @@ body {
             box-sizing: border-box;
     color: #fff;
     line-height: 50px;
-    background-color: #be987c; }
+    background-color: #be987c;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease; }
     #umai-select-a-time .modal-body .meal a.disabled {
       color: #999999;
       background-color: #eaeaea;
