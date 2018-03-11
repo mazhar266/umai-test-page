@@ -453,6 +453,7 @@ body {
         #umai-select-a-time .modal-body .days .col-sm-1-10 a .badge {
           width: 30px;
           height: 30px;
+          padding: 0;
           border: 2px solid #a6724b;
           border-radius: 50%;
           -webkit-box-sizing: border-box;
@@ -460,7 +461,7 @@ body {
           color: #a6724b;
           font-size: 1.071em;
           text-align: center;
-          line-height: 21px;
+          line-height: 28px;
           background-color: transparent;
           -webkit-transition: all 200ms ease;
           transition: all 200ms ease; }
@@ -470,12 +471,12 @@ body {
           #umai-select-a-time .modal-body .days .col-sm-1-10 a .badge.disabled {
             border: none;
             color: #5d5d5d;
-            line-height: 24px;
+            line-height: 30px;
             background-color: #eaeaea; }
           #umai-select-a-time .modal-body .days .col-sm-1-10 a .badge.red {
             border: none;
             color: #5d5d5d;
-            line-height: 24px;
+            line-height: 30px;
             background-color: #f3dfdf; }
   #umai-select-a-time .modal-body .meal h4 {
     margin: 25px 0;

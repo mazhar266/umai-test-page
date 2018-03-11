@@ -247,6 +247,7 @@ body {
           .badge {
             width: 30px;
             height: 30px;
+            padding: 0;
             border: 2px solid $accent-color;
             border-radius: 50%;
             -moz-box-sizing: border-box;
@@ -254,7 +255,7 @@ body {
             color: $accent-color;
             font-size: 1.071em;
             text-align: center;
-            line-height: 21px;
+            line-height: 28px;
             background-color: transparent;
 
             -webkit-transition: all 200ms ease;
@@ -271,14 +272,14 @@ body {
             &.disabled {
               border: none;
               color: #5d5d5d;
-              line-height: 24px;
+              line-height: 30px;
               background-color: #eaeaea;
             }
 
             &.red {
               border: none;
               color: #5d5d5d;
-              line-height: 24px;
+              line-height: 30px;
               background-color: #f3dfdf;
             }
           }
