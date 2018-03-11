@@ -52,6 +52,12 @@ body {
   // backdrop of the modal
   .modal-backdrop.in {
     opacity: 0.7 !important;
+
+    @include media-breakpoint-down(sm) {
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      padding-bottom: 50px;
+    }
   }
 
   .modal-title {

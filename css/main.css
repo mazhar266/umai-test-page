@@ -324,6 +324,11 @@ body {
 
 #umai-select-a-time .modal-backdrop.in {
   opacity: 0.7 !important; }
+  @media (max-width: 767px) {
+    #umai-select-a-time .modal-backdrop.in {
+      -webkit-box-sizing: content-box;
+              box-sizing: content-box;
+      padding-bottom: 50px; } }
 #umai-select-a-time .modal-title .badge {
   width: 35px;
   height: 35px;
