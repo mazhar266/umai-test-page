@@ -1,0 +1,371 @@
+/**
+ * File   : main.scss
+ * Author : Mazhar Ahmed
+ */
+
+// import compass
+// @import "compass";
+// import the variables, breakpoint from the bootstrap
+@import 'variables';
+@import 'breakpoint';
+// import utility classes
+@import 'utility';
+
+// variable declarations here
+$modal-header-background: #091d1f;
+$accent-color: #a6724b;
+$black-color: #3d3d3d;
+
+
+/**
+ * @name get-text-color
+ * @author Mazhar Ahmed
+ *
+ * getting the text color function depending on background color
+ *
+ * @returns color
+ */
+@function get-text-color($background-color) {
+  @if (lightness(complement($background-color)) > 50) {
+    @return #000000; // Lighter backgorund, return dark color
+  } @else {
+    @return #ffffff; // Darker background, return light color
+  }
+}
+
+// style goes here ##########################################
+
+// default reset css here
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;  // default font
+}
+
+body {
+  color: $black-color;
+  font-size: 14px;  // default font size
+}
+
+// customized umai modal related css
+#umai-select-a-time {
+  // backdrop of the modal
+  .modal-backdrop.in {
+    opacity: 0.7 !important;
+  }
+
+  .modal-title {
+    .badge {
+      width: 35px;
+      height: 35px;
+      margin-left: 0px;
+      color: get-text-color($modal-header-background);
+      border: 2px solid get-text-color($modal-header-background);
+      border-radius: 50%;
+      font-size: 18px;
+      line-height: 26px;
+      background-color: transparent;
+    }
+  }
+
+  // the whole modal content
+  .modal-content {
+    top: 20px;
+    border: none;
+    border-radius: 0;
+
+    @include media-breakpoint-down(sm) {
+      top: 40px;
+    }
+  }
+
+  // modal header
+  .modal-header {
+    color: get-text-color($modal-header-background);
+    background-color: $modal-header-background;
+
+    // powered by text at the top of the modal
+    .umai-credits {
+      position: absolute;
+      top: -35px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-weight: lighter;
+      color: #f2f2f2;
+      z-index: 10;
+      span {
+        font-size: 1.4em;
+      }
+    }
+
+    // close button of the modal
+    button.close {
+      position: absolute;
+      top: -25px;
+      left: 0;
+      width: 100px;
+      text-align: left;
+      color: #fff;
+      font-size: 1.2em;
+      text-shadow: none;
+      opacity: 1;
+      z-index: 20;
+      outline: none;
+
+      &:hover, &:active, &:focus  {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  // modal body
+  .modal-body {
+    background-color: #f2f2f2;
+    // @include filter-gradient(#ffffff, #f2f2f2, vertical); // IE6-9
+    // @include background-image(linear-gradient(top, #ffffff 80%, #f2f2f2 100%));
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 15px;
+      font-weight: lighter;
+      font-size: 2.143em;
+    }
+
+    .filter {
+      padding: 30px 15px 0 15px;
+
+      .col {
+        border-bottom: 1px solid #cbcbcb;
+        border-left: 1px solid #cbcbcb;
+        -webkit-box-shadow: 0 1px 0 0 #FFFFFF;
+        box-shadow: 0 1px 0 0 #FFFFFF;
+
+        &:first-child {
+          @include media-breakpoint-down(sm) {
+            border-left: none;
+
+            input, select {
+              padding-left: 0;
+            }
+          }
+        }
+
+        &:last-child {
+          border-left: none;
+
+          @include media-breakpoint-down(sm) {
+            input, select {
+              border-right: none;
+              text-align: center;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          input, select {
+            border-right: none;
+          }
+        }
+
+        &:after {
+          position: absolute;
+          right: 20px;
+          top: 0;
+          content: "\f107";
+          display: block;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-size: 1.2em;
+          line-height: 50px;
+        }
+      }
+
+      input, select {
+        height: 50px;
+        padding-left: 10px;
+        padding-right: 45px;
+        border: none;
+        border-right: solid 1px #fff;
+        border-radius: 0;
+        outline: none;
+        background-color: transparent;
+        box-shadow: none;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 1.143em;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+
+      }
+    }
+
+    .days {
+      margin-top: 25px;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+
+      .col-sm-1-10 {
+        position: relative;
+        text-align: center;
+
+        &:last-child:before {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          content: " ";
+          width: 1px;
+          height: 30px;
+          display: inline-block;
+          background-color: #cbcbcb;
+          -webkit-box-shadow: -1px 0 0 0 #ffffff;
+          box-shadow: -1px 0 0 0 #ffffff;
+        }
+
+        a {
+          color: initial;
+
+          &:hover, &:active, &:focus  {
+            text-decoration: none;
+
+            .badge {
+              @extend .fill;
+            }
+          }
+
+          div {
+            padding-bottom: 10px;
+            color: #727272;
+          }
+
+          .badge {
+            width: 30px;
+            height: 30px;
+            border: 2px solid $accent-color;
+            border-radius: 50%;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            color: $accent-color;
+            font-size: 1.071em;
+            text-align: center;
+            line-height: 21px;
+            background-color: transparent;
+
+            &.fill {
+              color: #fff;
+              background-color: $accent-color;
+            }
+
+            &.disabled {
+              border: none;
+              color: #5d5d5d;
+              line-height: 24px;
+              background-color: #eaeaea;
+            }
+
+            &.red {
+              border: none;
+              color: #5d5d5d;
+              line-height: 24px;
+              background-color: #f3dfdf;
+            }
+          }
+        }
+      }
+    }
+
+    .meal {
+      h4 {
+        margin: 25px 0;
+        font-size: 1.071em;
+      }
+
+      a {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #fff;
+        line-height: 50px;
+        background-color: #be987c;
+
+        &.selected {
+          @extend :hover;
+        }
+
+        &.disabled {
+          color: #999999;
+          background-color: #eaeaea;
+          cursor: default;
+
+          &:hover, &:active, &:focus  {
+            background-color: #eaeaea;
+          }
+        }
+
+        &.btn {
+          padding: 0;
+          border: 1px solid #202020;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          color: #202020;
+          background-color: transparent;
+
+          &:hover, &:active, &:focus  {
+            color: #fff;
+            background-color: #202020;
+          }
+
+          i {
+            display: inline-block;
+            margin-right: 15px;
+          }
+
+          @include media-breakpoint-down(md) {
+            padding: 10px 0;
+            line-height: 40px;
+          }
+        }
+
+        &:hover, &:active, &:focus {
+          background-color: $accent-color;
+        }
+
+        @include media-breakpoint-down(md) {
+          padding: 10px 0;
+          text-align: center;
+          line-height: 20px;
+
+          .align-right {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+  }
+
+  // modal footer
+  .modal-footer {
+    border: none;
+    text-align: left;
+
+    .modal-title {
+      color: #ececec;
+
+      .badge {
+        color: #ececec;
+        border: 2px solid #ececec;
+      }
+    }
+  }
+}

@@ -1,0 +1,296 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UMAI</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <!-- fontawesome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <!-- umai specialized font icons -->
+    <link href="https://file.myfontastic.com/pFKrKNpvwB493rgWTrgnQV/icons.css" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <!-- custom application css -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser.
+        Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <p>
+                <a class="btn btn-primary btn-lg" href="#" role="button"
+                    data-toggle="modal" data-target="#umai-select-a-time"
+                    data-backdrop="static" data-keyboard="false">
+                    Select a time &raquo;
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="umai-select-a-time" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span class="icon-cross"></span>
+                    </button>
+                    <div class="umai-credits">
+                        Powered by
+                        <span>UMAI</span>
+                    </div>
+                    <h4 class="modal-title">
+                        <span class="badge badge-pill m-r">1</span>
+                        Select a time
+                    </h4>
+                </div>
+
+                <div class="modal-body">
+                  <h2>Tippling Club</h2>
+                  <img src="http://via.placeholder.com/1000x150" alt="" width="100%">
+
+                  <div class="row filter">
+                    <div class="col-xs-6 col-sm-4 col-sm-push-4 col-md-4 col p-a-0">
+                        <select class="form-control">
+                            <option>Party of 2</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-sm-push-4 col-md-4 col p-a-0">
+                        <input type="text" class="form-control datepicker" placeholder="Select Time">
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-4 col p-a-0">
+                        <input type="text" class="form-control datepicker" value="Today, 13/10/2017">
+                    </div>
+                  </div>
+
+                  <div class="row days">
+                    <div class="col-sm-1-10">
+                        <a href="">
+                            <div>Today</div>
+                            <span class="badge badge-pill fill">2</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-1-10">
+                        <a href="">
+                            <div>Fri</div>
+                            <span class="badge badge-pill">3</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-1-10">
+                        <a href="">
+                            <div>Sat</div>
+                            <span class="badge badge-pill">4</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-1-10">
+                        <a href="">
+                            <div>Sun</div>
+                            <span class="badge badge-pill">5</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-1-10">
+                        <a href="">
+                            <div>Mon</div>
+                            <span class="badge badge-pill disabled">6</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-1-10">
+                        <a href="">
+                            <div>Tue</div>
+                            <span class="badge badge-pill red">7</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-1-10">
+                        <a href="">
+                            <div>Wed</div>
+                            <span class="badge badge-pill">8</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-1-10">
+                        <a href="">
+                            <div>Thu</div>
+                            <span class="badge badge-pill">9</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-1-10">
+                        <a href="">
+                            <div>Fri</div>
+                            <span class="badge badge-pill">10</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-1-10">
+                        <a href="">
+                            <div>&nbsp;</div>
+                            <span class="badge badge-pill">+</span>
+                        </a>
+                    </div>
+                  </div>
+
+                  <!-- lunch time selection -->
+                  <div class="row meal">
+                      <div class="col-sm-12">
+                          <h4>Lunch</h4>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                          <a href="" class="row">
+                              <div class="col-xs-12 col-sm-12 col-md-6">11:30 AM</div>
+                              <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                          </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">11:45 AM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">12:00 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">12:15 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">12:30 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row disabled">
+                            <div class="col-xs-12 col-sm-12 col-md-6">12:45 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row selected">
+                            <div class="col-xs-12 col-sm-12 col-md-6">1:00 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">1:15 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="btn">
+                            <i class="far fa-bell"></i>
+                            <span>Notify Me</span>
+                        </a>
+                      </div>
+                  </div>
+
+                  <!-- dinner time selection -->
+                  <div class="row meal">
+                      <div class="col-sm-12">
+                          <h4>Dinner</h4>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                          <a href="" class="row">
+                              <div class="col-xs-12 col-sm-12 col-md-6">11:30 AM</div>
+                              <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                          </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">11:45 AM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">12:00 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">12:15 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">12:30 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row disabled">
+                            <div class="col-xs-12 col-sm-12 col-md-6">12:45 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row disabled">
+                            <div class="col-xs-12 col-sm-12 col-md-6">1:00 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="row disabled">
+                            <div class="col-xs-12 col-sm-12 col-md-6">1:15 PM</div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 align-right">Dining Room</div>
+                        </a>
+                      </div>
+                      <div class="col-xs-6 col-sm-4">
+                        <a href="" class="btn">
+                            <i class="far fa-bell"></i>
+                            <span>Notify Me</span>
+                        </a>
+                      </div>
+                  </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <h4 class="modal-title">
+                        <span class="badge badge-pill m-r">2</span>
+                        Details
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
